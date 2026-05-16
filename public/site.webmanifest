@@ -1,0 +1,16 @@
+{
+  "name": "سداد كوم المحدودة",
+  "short_name": "سداد كوم",
+  "description": "حلول التحصيل والخدمات المتكاملة",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5fbfc",
+  "theme_color": "#063447",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="واجهة مدينة وأبراج بتدرج أزرق وتركواز">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#031521"/>
+      <stop offset="0.48" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="35%" cy="18%" r="65%">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity="0.42"/>
+      <stop offset="0.45" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tower" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect width="1200" height="760" fill="url(#glow)"/>
+  <g opacity="0.18" stroke="#fff" stroke-width="1">
+    <path d="M0 132H1200M0 244H1200M0 356H1200M0 468H1200M0 580H1200"/>
+    <path d="M118 0V760M246 0V760M374 0V760M502 0V760M630 0V760M758 0V760M886 0V760M1014 0V760M1142 0V760"/>
+  </g>
+  <circle cx="246" cy="120" r="120" fill="#5eead4" opacity="0.18" filter="url(#blur)"/>
+  <circle cx="920" cy="220" r="150" fill="#ffffff" opacity="0.08" filter="url(#blur)"/>
+  <g transform="translate(70 176)">
+    <rect x="28" y="238" width="112" height="338" rx="12" fill="url(#tower)" stroke="#fff" stroke-opacity="0.16"/>
+    <rect x="166" y="168" width="132" height="408" rx="14" fill="url(#tower)" stroke="#fff" stroke-opacity="0.18"/>
+    <rect x="326" y="78" width="166" height="498" rx="16" fill="url(#tower)" stroke="#fff" stroke-opacity="0.2"/>
+    <rect x="524" y="128" width="132" height="448" rx="14" fill="url(#tower)" stroke="#fff" stroke-opacity="0.17"/>
+    <rect x="684" y="34" width="178" height="542" rx="18" fill="url(#tower)" stroke="#fff" stroke-opacity="0.22"/>
+    <rect x="894" y="210" width="112" height="366" rx="12" fill="url(#tower)" stroke="#fff" stroke-opacity="0.16"/>
+    <g fill="#fff" opacity="0.34">
+      <rect x="62" y="276" width="14" height="14" rx="3"/><rect x="94" y="276" width="14" height="14" rx="3"/><rect x="62" y="326" width="14" height="14" rx="3"/><rect x="94" y="326" width="14" height="14" rx="3"/><rect x="62" y="376" width="14" height="14" rx="3"/><rect x="94" y="376" width="14" height="14" rx="3"/>
+      <rect x="206" y="214" width="16" height="16" rx="3"/><rect x="244" y="214" width="16" height="16" rx="3"/><rect x="206" y="272" width="16" height="16" rx="3"/><rect x="244" y="272" width="16" height="16" rx="3"/><rect x="206" y="330" width="16" height="16" rx="3"/><rect x="244" y="330" width="16" height="16" rx="3"/>
+      <rect x="374" y="132" width="18" height="18" rx="3"/><rect x="424" y="132" width="18" height="18" rx="3"/><rect x="374" y="198" width="18" height="18" rx="3"/><rect x="424" y="198" width="18" height="18" rx="3"/><rect x="374" y="264" width="18" height="18" rx="3"/><rect x="424" y="264" width="18" height="18" rx="3"/><rect x="374" y="330" width="18" height="18" rx="3"/><rect x="424" y="330" width="18" height="18" rx="3"/>
+      <rect x="566" y="182" width="16" height="16" rx="3"/><rect x="604" y="182" width="16" height="16" rx="3"/><rect x="566" y="240" width="16" height="16" rx="3"/><rect x="604" y="240" width="16" height="16" rx="3"/><rect x="566" y="298" width="16" height="16" rx="3"/><rect x="604" y="298" width="16" height="16" rx="3"/>
+      <rect x="736" y="96" width="18" height="18" rx="3"/><rect x="790" y="96" width="18" height="18" rx="3"/><rect x="736" y="164" width="18" height="18" rx="3"/><rect x="790" y="164" width="18" height="18" rx="3"/><rect x="736" y="232" width="18" height="18" rx="3"/><rect x="790" y="232" width="18" height="18" rx="3"/><rect x="736" y="300" width="18" height="18" rx="3"/><rect x="790" y="300" width="18" height="18" rx="3"/>
+      <rect x="930" y="252" width="14" height="14" rx="3"/><rect x="964" y="252" width="14" height="14" rx="3"/><rect x="930" y="304" width="14" height="14" rx="3"/><rect x="964" y="304" width="14" height="14" rx="3"/><rect x="930" y="356" width="14" height="14" rx="3"/><rect x="964" y="356" width="14" height="14" rx="3"/>
+    </g>
+  </g>
+  <path d="M0 624C164 575 286 608 426 581C590 550 670 510 820 536C968 562 1060 607 1200 565V760H0Z" fill="#09090b" opacity="0.64"/>
+</svg>
