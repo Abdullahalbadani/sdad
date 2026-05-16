@@ -126,8 +126,8 @@ const content = {
       requestInitial: 'اطلب استشارة أولية',
       exploreServices: 'استعرض خدماتنا',
       downloadProfile: 'تحميل الملف التعريفي',
-      downloadAr: 'تحميل الملف العربي',
-      downloadEn: 'تحميل الملف الإنجليزي',
+     downloadAr: 'البروفايل بالعربي',
+downloadEn: 'English Profile',
       learnMore: 'معرفة المزيد',
       moreServices: 'المزيد من الخدمات',
       viewWorkflow: 'عرض آلية العمل',
@@ -330,8 +330,8 @@ const content = {
       requestInitial: 'Request Initial Consultation',
       exploreServices: 'Explore Services',
       downloadProfile: 'Download Company Profile',
-      downloadAr: 'Arabic Profile',
-      downloadEn: 'English Profile',
+  downloadAr: 'Arabic Profile',
+downloadEn: 'English Profile',
       learnMore: 'Learn More',
       moreServices: 'More Services',
       viewWorkflow: 'View Workflow',
@@ -629,9 +629,13 @@ function BrandMark({ lang, compact = false }: { lang: Language; compact?: boolea
   const c = company[lang];
   return (
     <div className="flex min-w-0 items-center gap-3">
-      <div className={`${compact ? 'h-12 w-12' : 'h-14 w-14'} flex flex-shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-cyan-100 bg-white shadow-lg shadow-cyan-950/10`}>
-        <img src="./images/logo-symbol.png" alt="Sadad Com logo" className="h-full w-full object-cover" />
-      </div>
+    <div className={`${compact ? 'h-12 w-12' : 'h-16 w-16'} flex flex-shrink-0 items-center justify-center overflow-visible bg-transparent`}>
+  <img
+    src="./images/logo-symbol.png"
+    alt="Sadad Com logo"
+    className="h-full w-full object-contain"
+  />
+</div>
       <div className="min-w-0">
         <p className="truncate text-lg font-extrabold text-slate-950">{c.name}</p>
         <p className="hidden text-xs font-semibold tracking-[0.18em] text-slate-500 sm:block">{c.enName}</p>
@@ -778,8 +782,22 @@ function Hero({ lang }: { lang: Language }) {
             </span>
           </Reveal>
           <Reveal delay={90}>
-            <h1 className="mt-5 max-w-4xl text-4xl font-extrabold leading-[1.22] tracking-tight sm:text-5xl lg:text-6xl">{hero.title}</h1>
-          </Reveal>
+<h1 className="mt-5 max-w-4xl font-extrabold tracking-tight text-white">
+  {lang === 'ar' ? (
+    <>
+      <span className="block text-4xl leading-[1.15] sm:text-5xl lg:text-6xl">
+        سداد كوم المحدودة
+      </span>
+      <span className="mt-3 block text-2xl leading-[1.45] sm:text-3xl lg:text-4xl">
+        شريكك التشغيلي لإدارة المطالبات وتطوير الأعمال.
+      </span>
+    </>
+  ) : (
+    <span className="block text-4xl leading-[1.18] sm:text-5xl lg:text-6xl">
+      {hero.title}
+    </span>
+  )}
+</h1>          </Reveal>
           <Reveal delay={160}>
             <p className="mt-6 max-w-2xl text-lg leading-9 text-cyan-50/90">{hero.subtitle}</p>
           </Reveal>
@@ -797,9 +815,7 @@ function Hero({ lang }: { lang: Language }) {
             </div>
           </Reveal>
 
-          <Reveal delay={280} className="mt-5">
-            <ProfileDownloadButtons lang={lang} variant="dark" />
-          </Reveal>
+          
 
           <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:max-w-2xl">
             {hero.trust.map((item, index) => (
@@ -830,8 +846,7 @@ function Hero({ lang }: { lang: Language }) {
                 ))}
               </div>
             </div>
-          <div className="absolute left-7 top-7 rounded-3xl border border-cyan-100/40 bg-white/10 p-4 shadow-xl backdrop-blur-md">
-  <p className="text-xs font-bold text-cyan-200">
+<div className="absolute left-4 top-28 origin-top-left scale-[0.92] rounded-3xl border border-cyan-100/40 bg-white/10 p-4 shadow-xl backdrop-blur-md sm:left-7 sm:top-7 sm:scale-100"> <p className="text-xs font-bold text-cyan-200">
     {hero.sidebarTitle}
   </p>
 
@@ -886,9 +901,7 @@ function PreviewAbout({ lang }: { lang: Language }) {
     <section className="py-20 sm:py-24">
       <div className="section-container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] border border-white bg-white p-3 shadow-2xl shadow-cyan-950/10">
-            <img src="./images/logo-full.png" alt="Sadad Com visual identity" className="h-[360px] w-full rounded-[1.5rem] object-cover" />
-          </div>
+<div className="relative overflow-hidden rounded-[2rem] border border-cyan-100/60 bg-cyan-50/40 p-3 shadow-xl shadow-cyan-950/5"><img src="./images/logo-full.png" alt="Sadad Com visual identity" className="mx-auto h-auto max-h-[360px] w-full object-contain px-3" />          </div>
         </Reveal>
         <div>
           <Reveal>
@@ -1005,9 +1018,7 @@ function GovernanceSection({ lang }: { lang: Language }) {
           </span>
           <h2 className="text-3xl font-extrabold leading-tight sm:text-4xl">{t.governanceTitle}</h2>
           <p className="mt-5 text-base leading-8 text-slate-300">{t.governanceSubtitle}</p>
-          <div className="mt-8">
-            <ProfileDownloadButtons lang={lang} variant="dark" />
-          </div>
+         
         </Reveal>
         <div className="grid gap-5 md:grid-cols-2">
           {content[lang].governance.map((item, index) => (
@@ -1071,9 +1082,7 @@ function PageHero({ lang, eyebrow, title, subtitle, icon: Icon }: { lang: Langua
           </span>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">{title}</h1>
           <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">{subtitle}</p>
-          <div className="mt-8">
-            <ProfileDownloadButtons lang={lang} variant="dark" />
-          </div>
+         
         </Reveal>
       </div>
     </section>
@@ -1155,6 +1164,25 @@ function AboutPage({ lang }: { lang: Language }) {
           />
         </div>
       </section>
+      <section className="pb-20">
+  <div className="section-container">
+    <Reveal>
+      <div className="rounded-[2rem] border border-cyan-200/70 bg-white p-8 text-center shadow-xl shadow-cyan-950/10">
+        <h2 className="text-2xl font-extrabold text-slate-950">
+          {lang === 'ar' ? 'الملف التعريفي للشركة' : 'Company Profile'}
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-8 text-slate-600">
+          {lang === 'ar'
+            ? 'يمكنك الاطلاع على الملف التعريفي لسداد كوم المحدودة باللغتين العربية والإنجليزية.'
+            : 'You can view Sadad Com Limited company profile in both Arabic and English.'}
+        </p>
+        <div className="mt-6 flex justify-center">
+          <ProfileDownloadButtons lang={lang} />
+        </div>
+      </div>
+    </Reveal>
+  </div>
+</section>
       <CTA lang={lang} />
     </main>
   );
@@ -1402,9 +1430,7 @@ function Footer({ lang }: { lang: Language }) {
         <div>
           <BrandMark lang={lang} />
           <p className="mt-5 max-w-xl text-sm leading-8 text-slate-600">{ui.footerNote}</p>
-          <div className="mt-5">
-            <ProfileDownloadButtons lang={lang} />
-          </div>
+         
         </div>
         <div>
           <h3 className="text-lg font-extrabold text-slate-950">{lang === 'ar' ? 'روابط الموقع' : 'Site Links'}</h3>
