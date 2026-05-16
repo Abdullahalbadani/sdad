@@ -630,7 +630,7 @@ function BrandMark({ lang, compact = false }: { lang: Language; compact?: boolea
   return (
     <div className="flex min-w-0 items-center gap-3">
       <div className={`${compact ? 'h-12 w-12' : 'h-14 w-14'} flex flex-shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-cyan-100 bg-white shadow-lg shadow-cyan-950/10`}>
-        <img src="./images/logo-symbol.jpg" alt="Sadad Com logo" className="h-full w-full object-cover" />
+        <img src="./images/logo-symbol.png" alt="Sadad Com logo" className="h-full w-full object-cover" />
       </div>
       <div className="min-w-0">
         <p className="truncate text-lg font-extrabold text-slate-950">{c.name}</p>
@@ -830,17 +830,23 @@ function Hero({ lang }: { lang: Language }) {
                 ))}
               </div>
             </div>
-            <div className="absolute left-7 top-7 rounded-3xl border border-cyan-100/40 bg-white/92 p-4 text-slate-950 shadow-xl backdrop-blur">
-              <p className="text-xs font-bold text-slate-500">{hero.sidebarTitle}</p>
-              <div className="mt-3 space-y-2">
-                {hero.pillars.map((item) => (
-                  <p key={item} className="flex items-center gap-2 text-sm font-extrabold">
-                    <CheckCircle2 className="h-4 w-4 text-cyan-700" />
-                    {item}
-                  </p>
-                ))}
-              </div>
-            </div>
+          <div className="absolute left-7 top-7 rounded-3xl border border-cyan-100/40 bg-white/10 p-4 shadow-xl backdrop-blur-md">
+  <p className="text-xs font-bold text-cyan-200">
+    {hero.sidebarTitle}
+  </p>
+
+  <div className="mt-3 space-y-2">
+    {hero.pillars.map((item) => (
+      <p
+        key={item}
+        className="flex items-center gap-2 text-sm font-extrabold text-white"
+      >
+        <CheckCircle2 className="h-4 w-4 text-cyan-200" />
+        {item}
+      </p>
+    ))}
+  </div>
+</div>
           </div>
         </Reveal>
       </div>
@@ -881,7 +887,7 @@ function PreviewAbout({ lang }: { lang: Language }) {
       <div className="section-container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <Reveal>
           <div className="relative overflow-hidden rounded-[2rem] border border-white bg-white p-3 shadow-2xl shadow-cyan-950/10">
-            <img src="./images/logo-full.jpg" alt="Sadad Com visual identity" className="h-[360px] w-full rounded-[1.5rem] object-cover" />
+            <img src="./images/logo-full.png" alt="Sadad Com visual identity" className="h-[360px] w-full rounded-[1.5rem] object-cover" />
           </div>
         </Reveal>
         <div>
@@ -917,8 +923,7 @@ function CardGrid({ items, columns = 'lg:grid-cols-3' }: { items: CardItem[]; co
     <div className={`grid gap-5 md:grid-cols-2 ${columns}`}>
       {items.map((item, index) => (
         <Reveal key={item.title} delay={index * 75}>
-          <article className="card h-full p-7">
-            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-900/10 text-cyan-800">
+<article className="h-full rounded-[28px] border border-cyan-200/70 bg-white p-7 shadow-xl shadow-cyan-950/10 transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-2xl">            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-900/10 text-cyan-800">
               <item.icon className="h-7 w-7" />
             </div>
             <h3 className="text-xl font-extrabold leading-8 text-slate-950">{item.title}</h3>
@@ -940,8 +945,7 @@ function ServicesPreview({ lang }: { lang: Language }) {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {content[lang].services.slice(0, 6).map((service, index) => (
             <Reveal key={service.title} delay={index * 80}>
-              <article className="premium-card h-full p-7">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-lg shadow-slate-950/20">
+<article className="h-full rounded-[28px] border border-cyan-200/70 bg-white p-7 shadow-xl shadow-cyan-950/10 transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-2xl">                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-lg shadow-slate-950/20">
                   <service.icon className="h-7 w-7" />
                 </div>
                 <h3 className="text-xl font-extrabold leading-8 text-slate-950">{service.title}</h3>
@@ -971,8 +975,7 @@ function MethodologyPreview({ lang }: { lang: Language }) {
         <div className="grid gap-5 lg:grid-cols-4">
           {content[lang].methodology.map((step: ProcessStep, index) => (
             <Reveal key={step.number} delay={index * 90}>
-              <div className="card h-full p-6">
-                <div className="mb-5 inline-flex rounded-2xl bg-slate-950 px-4 py-2 text-lg font-extrabold text-white">{step.number}</div>
+<div className="h-full rounded-[28px] border border-cyan-200/70 bg-white p-6 shadow-xl shadow-cyan-950/10 transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-2xl">                <div className="mb-5 inline-flex rounded-2xl bg-slate-950 px-4 py-2 text-lg font-extrabold text-white">{step.number}</div>
                 <h3 className="text-lg font-extrabold text-slate-950">{step.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{step.description}</p>
               </div>
@@ -1166,8 +1169,7 @@ function ServicesPage({ lang }: { lang: Language }) {
         <div className="section-container grid gap-6 lg:grid-cols-2">
           {content[lang].services.map((service, index) => (
             <Reveal key={service.title} delay={index * 75}>
-              <article className="premium-card h-full p-7 sm:p-8">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-950 text-white">
+<article className="h-full rounded-[28px] border border-cyan-200/70 bg-white p-7 shadow-xl shadow-cyan-950/10 transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-2xl sm:p-8">                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-950 text-white">
                   <service.icon className="h-7 w-7" />
                 </div>
                 <h2 className="text-2xl font-extrabold leading-9 text-slate-950">{service.title}</h2>
