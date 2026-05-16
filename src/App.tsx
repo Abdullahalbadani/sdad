@@ -1070,8 +1070,7 @@ function CTA({ lang }: { lang: Language }) {
   );
 }
 
-function PageHero({ lang, eyebrow, title, subtitle, icon: Icon }: { lang: Language; eyebrow: string; title: string; subtitle: string; icon: LucideIcon }) {
-  return (
+function PageHero({ lang: _lang, eyebrow, title, subtitle, icon: Icon }: { lang: Language; eyebrow: string; title: string; subtitle: string; icon: LucideIcon }) {  return (
     <section className="relative overflow-hidden bg-slate-950 py-16 text-white sm:py-20 lg:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(45,212,191,0.28),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_30%)]" />
       <div className="section-container relative">
