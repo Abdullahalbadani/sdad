@@ -846,7 +846,13 @@ function Hero({ lang }: { lang: Language }) {
                 ))}
               </div>
             </div>
-<div className="absolute left-4 top-28 origin-top-left scale-[0.92] rounded-3xl border border-cyan-100/40 bg-white/10 p-4 shadow-xl backdrop-blur-md sm:left-7 sm:top-7 sm:scale-100"> <p className="text-xs font-bold text-cyan-200">
+<div
+  className={`absolute top-36 scale-[0.92] rounded-3xl border border-cyan-100/40 bg-white/10 p-4 shadow-xl backdrop-blur-md sm:top-7 sm:scale-100 ${
+    lang === 'en'
+      ? 'right-4 left-auto origin-top-right text-left sm:right-7 sm:left-auto'
+      : 'left-4 right-auto origin-top-left text-right sm:left-7 sm:right-auto'
+  }`}
+><p className="text-xs font-bold text-cyan-200">
     {hero.sidebarTitle}
   </p>
 
